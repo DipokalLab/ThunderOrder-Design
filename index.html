@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>썬더오더</title>
+
+    <meta name="og:email" content="3457xc@gmail.com"/>
+    <meta name="designer" content="Dipokal">
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+
+	  <style>
+      #page-loading img{
+        display:block; 
+        position:absolute; 
+        top:50%; 
+        left:50%; 
+        margin-left:-100px; 
+        margin-top:-130px;
+
+      }
+	  
+      .fadeInAndOut {
+          opacity: 1;
+          animation: fade 2s linear;
+      }
+		  #page{
+        background-color: #f7ea31;
+		  }
+
+		  #page1{
+        display:block; position:absolute; top:50%; margin-top:-130px;
+		  }
+		  #page2{
+        display:block; position:absolute; top:50%; margin-top:-130px;
+		  }
+      .btn{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      .yellowBotton{
+        background-color: #f7ea31;
+      }
+      .fontNoto{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      .roundBtn{
+        border-radius: 19px;
+      }
+      body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+	  </style>
+    <div id="page-loading" class="text-center">
+      <img src="logo.png">
+    </div>
+  </head>
+  <body>
+  <div id="page" class="fadeInAndOut">
+    <div class='row'>
+
+      <div class='col-md-12 text-center' id="page1">
+        <h3 class="fontNoto">썬더오더</h3>
+        <br>
+        <button class="btn btn-white btn-lg" onclick="page2()"><i class="fas fa-comment"></i>  카카오톡으로 로그인</button> <br> <br>
+        <button class="btn btn-white btn-lg"><i class="fab fa-facebook-square"></i>  페이스북으로 로그인</button>    
+      </div>
+
+      <div class='col-md-12 text-center' id="page2">
+        <h3 class="fontNoto">API</h3>
+        <br>
+        <div class="fixed-bottom">
+          <button class="btn yellowBotton btn-lg" onclick="page3()">입력완료</button> <br> <br>
+
+        </div>
+
+      </div>
+
+      <div class='col-md-12 text-center' id="page3">
+        <div class="fixed-top">
+          <nav class="navbar navbar-expand-lg navbar-light yellowBotton">
+            <a class="navbar-brand" href="#">썬더오더</a>
+
+            <img src="logo.png" alt="" class="img-responsive img-rounded" height="20" width="20">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            </div>
+          </nav>
+        </div>
+        <br>
+        <div class="fixed-bottom">
+          <button class="btn btn-light roundBtn" onclick="page3()">배달주문</button> 
+          <button class="btn btn-dark roundBtn" onclick="page3()">픽업주문</button> 
+          <br>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+  <script src='//unpkg.com/popper.js@1/dist/umd/popper.min.js'></script>
+  <script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+  <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+	  
+	<script>
+	  $(document).ready(function() { $("#page").css("display", "none"); });
+
+    $(window).on('load', function() {    
+
+      setTimeout(function() {  
+        $("#page-loading").css("display", "none");
+        $("body").css("background-color", "#f7ea31");
+        $("#page").css("display", "");
+        $("#page2").css("display", "none");
+        $("#page3").css("display", "none");
+
+        
+      }, 2000);
+      
+    });		
+    function page2() {
+      $("body").css("background-color", "#ffffff");
+      $("#page1").css("display", "none");
+      $("#page2").css("display", "");
+      $("#page3").css("display", "none");
+
+    }
+
+    function page3() {
+      $("body").css("background-color", "#ffffff");
+      $("#page1").css("display", "none");
+      $("#page2").css("display", "none");
+      $("#page3").css("display", "");
+
+    }
+
+  
+	</script>
+
+
+  </body>
+</html>
